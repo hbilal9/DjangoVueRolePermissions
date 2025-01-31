@@ -17,19 +17,31 @@ const routes = [
 				name: "dashboard.home",
 				component: () => import("@/views/dashboard/Home.vue"),
 			},
+			// dont allow access to this route if user dont have permission view_company
 			{
 				path: "companies",
 				name: "dashboard.companies",
+				meta: {
+					requiresPermission: "view_company", // Define the required permission
+				},
 				component: () => import("@/views/dashboard/Companies.vue"),
 			},
 		],
-		beforeEnter: (_to: RouteLocationNormalized, _from: RouteLocationNormalized, next: NavigationGuardNext) => {
+		beforeEnter: (to: RouteLocationNormalized, _from: RouteLocationNormalized, next: NavigationGuardNext) => {
 			const authStore = useAuthStore();
-			if (authStore.isLoggedIn) {
-				next();
-			} else {
-				next("/login");
+
+			// Check if the user is logged in
+			if (!authStore.isLoggedIn) next("/login");
+			// Check if the route requires a specific permission
+			if (to.meta.requiresPermission) {
+				const requiredPermission = to.meta.requiresPermission as string;
+				if (!authStore.hasPermission(requiredPermission)) {
+					// Redirect to a fallback route (e.g., dashboard or 403 page)
+					return next("/dashboard");
+				}
 			}
+			// Allow access to the route
+			next();
 		},
 	},
 	{
