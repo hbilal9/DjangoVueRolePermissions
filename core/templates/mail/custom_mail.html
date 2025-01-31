@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ subject }}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: none;
+            -ms-text-size-adjust: none;
+            background: #edf2ff;
+        }
+        {% comment %} table {
+            border-collapse: separate;
+            border-spacing: 0 2rem;
+        } {% endcomment %}
+        .btn {
+            padding: 0.5rem;
+            background: #7c3aed;
+            color: #fff !important;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 0.35rem;
+            margin-bottom: 1rem;
+        }
+        .download-btn {
+            padding: 0.5rem;
+            background: #7c3aed;
+            color: #fff !important;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 0.35rem;
+            margin-bottom: 1rem;
+        }
+        .logo-img {
+            width: 128px;
+        }
+        .mr-2 {
+            margin-right: 0.5rem;
+        }
+        .ml-2 {
+            margin-right: 0.5rem;
+        }
+    </style>
+
+</head>
+
+<body marginwidth="0" marginheight="0" style="margin-top: 0; margin-bottom: 0; padding-top: 0; padding-bottom: 0; width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;" offset="0" topmargin="0" leftmargin="0">
+{% load static %}
+<table data-bgcolor="BodyBg" data-module="01-Top Space Part" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#edf2ff" align="center" class="">
+    <tbody>
+        <tr>
+            <td valign="top" align="center">
+                <table class="main" width="800" cellspacing="0" cellpadding="0" border="0" align="center">
+                    <tbody>
+                        <tr>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+    <table data-bgcolor="BodyBg" data-module="10-Service Title Part" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#edf2ff" align="center" class="">
+        <tbody>
+            <tr>
+                <td valign="top" align="center">
+                    <table class="main" width="800" cellspacing="0" cellpadding="0" border="0" align="center">
+                        <tbody>
+                            <tr>
+                                <td valign="top" bgcolor="#FFFFFF" align="center">
+                                    <table class="two-left-inner" width="600" cellspacing="0" cellpadding="0" border="0" align="center">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" height="50" align="center">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="top" align="center">
+                                                    <table class="two-left-inner" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                            <td>
+                                                                <table width="170" cellspacing="0" cellpadding="0" border="0" align="center">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <a href="#" style="text-decoration:none;">
+                                                                                    <img
+                                                                                        src="https://api.tapiem.com/media/public/images/icon.png"
+                                                                                        style="width: 200px;"
+                                                                                        alt="logo"
+                                                                                    />
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+
+                                                        </tr>
+                                                            <tr>
+                                                                <td style="font-family:'Open Sans', sans-serif, Verdana; font-size:14px; color:#666666; font-weight:bold; text-transform:uppercase;" mc:edit="fm-39" valign="top" align="center" height="40">
+                                                                    <multiline></multiline>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-family:'Open Sans', sans-serif, Verdana; font-size:20px; color:#3b3a3a; font-weight:bold; line-height:50px; text-transform:none;" mc:edit="fm-40" valign="top" align="center">
+                                                                    <multiline>{{ title }}</multiline>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-size:5px; line-height:5px;" valign="top" height="5" align="center">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-family:'Open Sans', sans-serif, Verdana; font-size:14px; color:#3b3a3a; font-weight:normal; line-height:24px;" mc:edit="fm-41" valign="top" align="left">
+                                                                    <strong>Hi {{ full_name }},</strong>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-family:'Open Sans', sans-serif, Verdana; font-size:14px; color:#3b3a3a; font-weight:normal; line-height:24px;" mc:edit="fm-41" valign="top" align="left">
+                                                                    <multiline>
+                                                                        {{ content }}
+                                                                    </multiline>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="4" style="padding-top: 1rem; margin-bottom:1rem;">
+                                                                    {% autoescape off %}
+                                                                        {{ data }}
+                                                                    {% endautoescape %}
+                                                                </td>
+                                                            </tr>
+                                                            <tr style="margin-top:1rem;">
+                                                                <td style="margin-top:1rem; height:8rem;">
+                                                                    <table  style="font-family:'Open Sans', sans-serif, Verdana; font-size:14px; color:#3b3a3a; font-weight:normal; line-height:24px;">
+                                                                    <tr>
+                                                                        <td>Regards <br> Tapiem.com</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            *Please do not reply to this email. This is a computer generated email.
+                                                                        </td>
+                                                                    </tr>
+                                                                    </table>
+                                                                </td>
+                                                                </tr>
+                                                            <tr>
+                                                                <td style="font-size:5px; line-height:5px;" valign="top" height="15" align="center">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td valign="top" align="center">&nbsp;</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="font-size:80px; line-height:80px;" valign="top" height="80" align="center">&nbsp;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
